@@ -1,4 +1,4 @@
-package top.atstudy.springcloud.provider;
+package top.atstudy.springcloud.provider.Provider03Boot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,7 @@ public class AccountController {
 
     @GetMapping("")
     public String account(){
-        return "hello word! 8581";
+        return "hello word! 8583";
     }
 
 

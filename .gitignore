@@ -1,2 +1,13 @@
 .idea/*
 springcloud-demo.iml
+
+# target
+springcloud-demo-api/target/*
+springcloud-demo-consumer/target/*
+springcloud-demo-core/target/*
+springcloud-demo-eureka-master/target/*
+springcloud-demo-eureka-slave2/target/*
+springcloud-demo-eureka-slave3/target/*
+springcloud-demo-provider/target/*
+springcloud-demo-provider02/target/*
+springcloud-demo-provider03/target/*

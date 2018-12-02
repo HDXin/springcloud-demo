@@ -1,0 +1,19 @@
+server:
+  port: 8183
+
+
+eureka:
+  instance:
+    hostname: slave3.eureka.atstudy.top
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://master.eureka.atstudy.top:8181/eureka/,http://slave2.eureka.atstudy.top:8182/eureka/
+
+spring:
+  application:
+    name: springcloud-demo-eureka-slave3
+  freemarker:
+    prefer-file-system-access: false

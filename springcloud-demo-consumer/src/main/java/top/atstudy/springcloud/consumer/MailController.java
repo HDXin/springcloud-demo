@@ -15,13 +15,15 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/email")
 public class MailController {
 
+//    private static final String REST_URL_PREFIX = "http://localhost:8581";
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-DEMO-PROVIDER";
+
     @Autowired
     private RestTemplate restTemplate;
 
     @GetMapping("")
     public String get(){
-
-        return restTemplate.getForObject("http://localhost:8581/account", String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/account", String.class);
     }
 
 }

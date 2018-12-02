@@ -11,8 +11,13 @@
         <module>springcloud-demo-core</module>
         <module>springcloud-demo-api</module>
         <module>springcloud-demo-provider</module>
+        <module>springcloud-demo-provider02</module>
+        <module>springcloud-demo-provider03</module>
         <module>springcloud-demo-consumer</module>
-        <module>springcloud-demo-eureka</module>
+        <module>springcloud-demo-eureka-master</module>
+        <module>springcloud-demo-eureka-slave2</module>
+        <module>springcloud-demo-eureka-slave3</module>
+
     </modules>
     <packaging>pom</packaging>
     <name>spring demo</name>

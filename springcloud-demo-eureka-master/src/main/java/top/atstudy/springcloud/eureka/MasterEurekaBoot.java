@@ -1,20 +1,20 @@
-package top.atstudy.springcloud.consumer;
+package top.atstudy.springcloud.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author huangdexin @ harley
  * @email huangdexin@kuaicto.com
- * @date 2018/12/1 22:31
+ * @date 2018/12/1 23:46
  */
 @SpringBootApplication
-@EnableEurekaClient
-public class ConsumerBoot {
+@EnableEurekaServer
+public class MasterEurekaBoot {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerBoot.class, args);
+        SpringApplication.run(MasterEurekaBoot.class, args);
     }
 
 }
