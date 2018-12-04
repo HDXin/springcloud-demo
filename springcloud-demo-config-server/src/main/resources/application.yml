@@ -9,7 +9,9 @@ spring:
       server:
         git:
 #          uri: git@github.com:HDXin/springcloud-demo-config.git
-          uri: https://github.com/HDXin/springcloud-demo-config.git
+#          uri: https://github.com/HDXin/springcloud-demo-config.git
+          uri: https://github.com/HDXin/springcloud-demo.git
+          search-paths: springcloud-demo-config
 
 eureka:
   client:
