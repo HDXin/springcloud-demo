@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: springcloud-demo-api
+  cloud:
+    config:
+      name: springcloud-demo-api
+      label: master
+      profile: prod
+      discovery:
+        enabled: true
+        service-id: springcloud-demo-config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://master.eureka.atstudy.top:8181/eureka/,http://slave2.eureka.atstudy.top:8182/eureka/,http://slave3.eureka.atstudy.top:8183/eureka/
+  instance:
+    instance-id: springcloud-demo-api:${server.port}
+    prefer-ip-address: true
+
+info:
+  app.name: springcloud-demo-api
+  company.name: www.atstudy.top
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

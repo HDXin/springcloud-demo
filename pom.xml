@@ -18,6 +18,7 @@
         <module>springcloud-demo-eureka-slave2</module>
         <module>springcloud-demo-eureka-slave3</module>
         <module>springcloud-demo-zuul</module>
+        <module>springcloud-demo-config</module>
 
     </modules>
     <packaging>pom</packaging>

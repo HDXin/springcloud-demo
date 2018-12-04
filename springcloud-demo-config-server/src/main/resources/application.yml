@@ -1,0 +1,28 @@
+server:
+  port: 8981
+
+spring:
+  application:
+    name: springcloud-demo-config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: git@github.com:HDXin/springcloud-demo-config.git
+          uri: https://github.com/HDXin/springcloud-demo-config.git
+
+eureka:
+  client:
+    service-url:
+      #      defaultZone: http://master.eureka.atstudy.top:8181/eureka/
+      defaultZone: http://master.eureka.atstudy.top:8181/eureka/,http://slave2.eureka.atstudy.top:8182/eureka/,http://slave3.eureka.atstudy.top:8183/eureka/
+
+  instance:
+    instance-id: springcloud-demo-config-server:8981
+    prefer-ip-address: true
+
+info:
+  app.name: springcloud-demo-config-server
+  company.name: www.atstudy.top
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

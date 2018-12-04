@@ -12,3 +12,4 @@ springcloud-demo-provider/target/*
 springcloud-demo-provider02/target/*
 springcloud-demo-provider03/target/*
 springcloud-demo-zuul/target/*
+springcloud-demo-config-server/target/*
