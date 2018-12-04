@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active:
+    - local
+    - dev
+    - prod
+
+---
+server:
+  port: 8681
+
+spring:
+  profiles: local
+  application:
+    name: springcloud-demo-api
+
+---
+server:
+  port: 8683
+
+spring:
+  profiles: dev
+  application:
+    name: springcloud-demo-api
+
+---
+server:
+  port: 8685
+
+spring:
+  profiles: prod
+  application:
+    name: springcloud-demo-api
