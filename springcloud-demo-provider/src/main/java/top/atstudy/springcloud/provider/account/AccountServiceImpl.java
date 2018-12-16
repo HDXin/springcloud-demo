@@ -2,10 +2,10 @@ package top.atstudy.springcloud.provider.account;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -40,8 +40,8 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public List<Account> save(Iterable<Account> var1) {
-        return null;
+    public List<Account> save(Iterable<Account> accounts) {
+        return this.accountRepository.save(accounts);
     }
 
     @Override
@@ -51,17 +51,19 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account saveAndFlush(Account account) {
-        return null;
+        account.setCreateTime(new Date());
+        account.setBirth(new Date());
+        return this.accountRepository.saveAndFlush(account);
     }
 
     @Override
-    public void deleteInBatch(Iterable<Account> var1) {
-
+    public void deleteInBatch(Iterable<Account> accounts) {
+        this.accountRepository.deleteInBatch(accounts);
     }
 
     @Override
     public void deleteAllInBatch() {
-
+        this.accountRepository.deleteAllInBatch();
     }
 
     @Override
@@ -77,6 +79,11 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public List<Account> findAll(Example<Account> example, Sort sort) {
-        return null;
+        return this.accountRepository.findAll(example, sort);
+    }
+
+    @Override
+    public long countByQuery(String name, String mobile) {
+        return this.accountRepository.countByQuery(name, mobile);
     }
 }

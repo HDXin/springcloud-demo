@@ -8,5 +8,7 @@ package top.atstudy.springcloud.provider.account;
 public interface AccountService extends IDomainService<Account>{
 
 
+    long countByQuery(String name, String mobile);
+
 
 }
