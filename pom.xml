@@ -18,7 +18,9 @@
         <module>springcloud-demo-eureka-slave2</module>
         <module>springcloud-demo-eureka-slave3</module>
         <module>springcloud-demo-zuul</module>
-        <module>springcloud-demo-config</module>
+        <module>springcloud-demo-config-server</module>
+        <module>springcloud-demo-rabbitmq-client</module>
+        <module>springcloud-demo-rabbitmq-server</module>
 
     </modules>
     <packaging>pom</packaging>
