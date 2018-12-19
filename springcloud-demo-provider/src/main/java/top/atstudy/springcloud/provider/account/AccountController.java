@@ -4,6 +4,7 @@ import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
@@ -71,9 +72,16 @@ public class AccountController {
         this.accountService.deleteAllInBatch();
     }
 
-    @PostMapping("/saveAndFlush")
-    public Account saveAndFlush(@RequestBody Account req){
+    @PutMapping("/saveAndFlush/{id}")
+    public Account saveAndFlush(@PathVariable("id") Long id,
+                                @RequestBody Account req){
+        req.setId(id);
         return this.accountService.saveAndFlush(req);
+    }
+
+    @GetMapping("/find/query")
+    public Page<Account> findByQuery(AccountQuery query){
+        return this.accountService.findByQuery(query);
     }
 
 
